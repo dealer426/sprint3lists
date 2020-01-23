@@ -51,6 +51,19 @@ namespace sprint3lists
 
             List<int> numList = new List<int>();
 
+            AddToTheList(ref numList);
+            CheckList(ref numList);
+            CheckListForNumbers(ref numList);
+            
+            RemoveNumbersfromList(ref numList);
+            CheckListForNumbers(ref numList);
+            CheckList(ref numList);
+
+            Console.ReadKey();
+        }
+
+        static void AddToTheList(ref List<int> numList)
+        {
             numList.Add(1);
             numList.Add(23);
             numList.Add(9);
@@ -61,16 +74,8 @@ namespace sprint3lists
             numList.Add(63);
             numList.Add(14);
             numList.Add(5);
-
-            CheckList(ref numList);
-            CheckListForNumbers(ref numList);
-            RemoveNumbersfromList(ref numList);
-            CheckListForNumbers(ref numList);
-            CheckList(ref numList);
-
-            Console.ReadKey();
         }
-
+            
         static void CheckList(ref List<int> numList)
         {
             numList.ForEach(j => Console.WriteLine(j));
